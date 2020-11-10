@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Login:React.FC = () =>{
+const Profile:React.FC = () =>{
 
-return <h1>Login</h1>;
+return <h1>Profile</h1>;
 
 };
 
-export default Login;
+export default Profile;
