@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../../components/footer';
 import Header from '../../components/header';
-import {Form } from './styles';
+import {Form,Box} from './styles';
 
 const Cadastro: React.FC = () => {
 
@@ -11,8 +10,11 @@ const Cadastro: React.FC = () => {
             <Header></Header>
             <Form>
                 <span><h1>Informações de cadastro</h1></span>
-                <label htmlFor="">Email</label>
-                <input placeholder="E-mail ou nome de usuário" type="text" />
+
+                <Box>
+                    <label htmlFor="">Email</label>
+                    <input placeholder="E-mail ou nome de usuário" type="text" />
+                </Box>
 
                 <label htmlFor="">Senha de acesso</label>
                 <input placeholder="Senha do usuário" type="password" />

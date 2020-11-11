@@ -13,6 +13,7 @@ export const Form = styled.form`
         text-align:center;
         h1{
             color:#3A558F;
+            font-size:25px;
         }
     }
     label{
@@ -67,4 +68,10 @@ export const Form = styled.form`
         margin-top:15px;
     }
 
+`;
+
+export const Box = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
 `;
