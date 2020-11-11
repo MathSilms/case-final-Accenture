@@ -27,14 +27,22 @@ export const Form = styled.form`
     }
 
     button{
+        font-size:18px;
         margin:5px;
         margin-top:35px;
         padding:8px;
         background-color:#1ABC9C;
         color:white;
         border-radius:5px;
-        border-color:transparent;
+        border:none;
         cursor: pointer;
+        box-shadow : 1px 1px 2px black;
+    }
+    button:hover{
+        opacity: .8;
+    }
+    button:active{
+        box-shadow : 2px 2px 2px black inset;
     }
     span{
         margin:5px;
