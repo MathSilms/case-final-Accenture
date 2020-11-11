@@ -81,6 +81,7 @@ export const Section = styled.div`
         flex-direction:column;
         padding-top:15px;
 
+
         h2{
             color:#1ABC9C;
             font-weight:bold;
@@ -88,6 +89,26 @@ export const Section = styled.div`
         }
         span{
             color:#6F848C
+        }
+
+        @media (max-width: 1148px){
+            h2{
+                font-size:25px;
+            }
+            span{
+            color:#6F848C
+            }
+        }
+
+        @media (max-width: 768px){
+            h2{
+                font-size:15px;
+
+            }
+            span{
+                color:#6F848C;
+                font-size: 12px;
+            }
         }
     }
 `;
