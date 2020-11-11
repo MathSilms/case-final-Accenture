@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { BsFillPersonFill }  from 'react-icons/bs'
 
 export const Form = styled.form`
     background-color:rgba(0, 0, 0, 0.1);
@@ -11,20 +11,21 @@ export const Form = styled.form`
     border-radius:5px;
 
     label{
-        font-family: Poppins, sans-serif;
-        font-style: Bold;
-        font-weight:700;
-        font-size: 25px;
-        color:#6F848C;
-        margin:5px;
+    font-family: Poppins, sans-serif;
+    font-style: Bold;
+    font-weight:700;
+    font-size: 25px;
+    color:#6F848C;
+    margin:5px;
     }
 
     input{
-        padding:5px;
+        padding:10px;
         border-radius:5px;
-        border-color:transparent;
+        border:0.2px solid rgba(0, 0, 0, 0.3);
         margin:5px;
     }
+
 
     button{
         font-size:18px;
@@ -47,7 +48,7 @@ export const Form = styled.form`
     span{
         margin:5px;
         margin-top:15px;
-
+        color:#6F848C;
         a{
             color:#1ABC9C;
         }
@@ -61,3 +62,40 @@ export const Form = styled.form`
     }
 
 `;
+
+export const Section = styled.div`
+    display:flex;
+    margin:50px;
+
+    .content1{
+        flex:1.5;
+
+        img{
+            width:90%;
+        }
+    }
+    .content2{
+        flex:2;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        padding-top:15px;
+
+        h2{
+            color:#1ABC9C;
+            font-weight:bold;
+            font-size:40px;
+        }
+        span{
+            color:#6F848C
+        }
+    }
+`;
+
+export const PersonIcon = styled(BsFillPersonFill)`
+        color:#1ABC9C;
+        height:50px;
+        min-height:50px;
+        position:relative;
+        right:30px;
+    `;
