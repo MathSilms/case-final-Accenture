@@ -30,9 +30,11 @@ export const Form = styled.form`
         cursor: pointer;
         box-shadow : 1px 1px 2px black;
     }
+
     button:hover{
         opacity: .8;
     }
+
     button:active{
         box-shadow : 2px 2px 2px black inset;
     }
@@ -46,12 +48,37 @@ export const Form = styled.form`
         }
     }
 
+    .haveAccess{
+        margin:15px;
+        color:#6F848C;
+    }
+
     a{
         color:#1ABC9C;
         margin:5px;
         margin-top:15px;
     }
 
+    @media (max-width: 925px){
+        .title{
+            h1{
+                font-size:18px
+            }
+        }
+
+        .conditions{
+            font-size:12px;
+        }
+
+        button{
+            font-size:13px;
+        }
+
+        .haveAccess{
+            font-size:13px;
+        }
+
+    }
 `;
 
 export const Box = styled.div`
@@ -83,7 +110,17 @@ export const Box = styled.div`
             margin:5px;
             font-size:16px;
         }
+
+        @media (max-width: 925px){
+            label{
+                font-size: 15px;
+            }
+            input{
+                padding:6px;
+                font-size:12px;
+            }
+        }
+
     }
-
-
 `;
+
