@@ -9,34 +9,18 @@ export const Form = styled.form`
     flex-direction:column;
     border-radius:5px;
 
-    span{
+    .title{
         text-align:center;
+        margin-bottom:30px;
         h1{
             color:#3A558F;
             font-size:25px;
         }
     }
-    label{
-        font-family: Poppins, sans-serif;
-        font-style: Bold;
-        font-weight:700;
-        font-size: 19px;
-        color:#6F848C;
-        margin:5px;
-    }
-
-    input{
-        padding:8px;
-        border-radius:5px;
-        border:0.2px solid rgba(0, 0, 0, 0.3);
-        margin:5px;
-        font-size:13px;
-    }
-
 
     button{
         font-size:18px;
-        margin:5px;
+        margin:15px;
         margin-top:35px;
         padding:8px;
         background-color:#1ABC9C;
@@ -52,14 +36,14 @@ export const Form = styled.form`
     button:active{
         box-shadow : 2px 2px 2px black inset;
     }
-    span{
-        margin:5px;
+
+    .conditions{
+        margin:15px;
         margin-top:15px;
         color:#6F848C;
         a{
             color:#1ABC9C;
         }
-
     }
 
     a{
@@ -74,4 +58,32 @@ export const Box = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    width:100%;
+    flex-wrap:wrap;
+
+    div {
+        display:flex;
+        flex-direction:column;
+        flex:1;
+        margin-bottom:30px;
+        margin: 0 10px 0 10px;
+
+        label {
+            font-family: Poppins, sans-serif;
+            font-style: Bold;
+            font-weight:700;
+            font-size: 19px;
+            color:#6F848C;
+            margin:5px;
+        }
+        input {
+            padding:10px;
+            border-radius:5px;
+            border:0.2px solid rgba(0, 0, 0, 0.3);
+            margin:5px;
+            font-size:16px;
+        }
+    }
+
+
 `;

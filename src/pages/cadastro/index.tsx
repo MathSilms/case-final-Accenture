@@ -9,27 +9,34 @@ const Cadastro: React.FC = () => {
         <>
             <Header></Header>
             <Form>
-                <span><h1>Informações de cadastro</h1></span>
+                <span className='title'>
+                    <h1>Informações de cadastro</h1>
+                </span>
 
                 <Box>
-                    <label htmlFor="">Email</label>
-                    <input placeholder="E-mail ou nome de usuário" type="text" />
+                    <div>
+                        <label htmlFor="">Email</label>
+                        <input placeholder="E-mail ou nome de usuário" type="email" />
+                    </div>
+                    <div>
+                        <label htmlFor="">Senha de acesso</label>
+                        <input placeholder="Senha do usuário" type="password" />
+                    </div>
                 </Box>
 
-                <label htmlFor="">Senha de acesso</label>
-                <input placeholder="Senha do usuário" type="password" />
+                <Box>
+                    <div>
+                        <label htmlFor="">Cpf</label>
+                        <input placeholder="E-mail ou nome de usuário" type="text" />
+                    </div>
+                    <div>
+                        <label htmlFor="">Nome de usuário</label>
+                        <input placeholder="Senha do usuário" type="text" />
+                    </div>
+                </Box>
 
-                <label htmlFor="">Cpf</label>
-                <input placeholder="Senha do usuário" type="text" />
-
-                <label htmlFor="">Nome de usuário</label>
-                <input placeholder="Senha do usuário" type="text" />
-
-                <div>
-
-                </div>
-
-                <button>Entrar</button>
+                <span className='conditions'>Clicando em finalizar cadastro confirmo que tenho mais de 18 (dezoito) anos e que todas as minhas informações acima são verídicas. Confirmo também que concordo com os <Link to=''> Termos​ ​e​ ​Condições​ ​Gerais​ ​de Uso​ ​do T.I Boys.</Link></span>
+                <button>Finalizar cadastro</button>
                 <span>Já tem uma conta? <Link to='/login'>Faça Login!</Link> </span>
             </Form>
         </>
