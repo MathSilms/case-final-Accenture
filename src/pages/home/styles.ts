@@ -89,20 +89,29 @@ export const TicketSearchContainer = styled.div`
         border-radius: 5px;
         color: white;
         font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background: #1ABC9Caa;
+        }
     }
-
-
-
 `;
 
-export const BodyContainer = styled.body`
+export const BodyContent = styled.div`
     margin: 0 120px;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .flight-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 `;
 
 export const BodyTitle = styled.h2`
     margin: 20px 0;
     font-weight: 600;
     font-size: 30px;
+    width: 100%;
 `;
