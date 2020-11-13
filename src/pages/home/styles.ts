@@ -17,6 +17,10 @@ export const UpBanner = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    .banner-col {
+        max-width: 50%;
+    }
 `;
 
 export const BannerTitle = styled.h1`
@@ -35,7 +39,6 @@ export const BannerDetail = styled.h2`
 
 export const BannerImg = styled.img`
     width: auto;
-    //max-width: 50%;
     object-fit: contain;
     padding: 0 20px;
 `;
@@ -86,8 +89,29 @@ export const TicketSearchContainer = styled.div`
         border-radius: 5px;
         color: white;
         font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background: #1ABC9Caa;
+        }
     }
+`;
 
+export const BodyContent = styled.div`
+    margin: 0 120px;
+    display: flex;
+    flex-wrap: wrap;
 
+    .flight-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+`;
 
+export const BodyTitle = styled.h2`
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 30px;
+    width: 100%;
 `;
