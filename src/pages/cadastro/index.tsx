@@ -9,17 +9,15 @@ const Cadastro: React.FC = () => {
     const [email, setEmail] = useState<string>('')
     const [senha, setSenha] = useState<string>('')
     const [cpf, setCpf] = useState<string>('')
-    const [login, setLogin] = useState<string>('')
+    const [nome, setNome] = useState<string>('')
 
     async function handleCreateUser(e: FormEvent<HTMLFormElement>): Promise<void> {
         e.preventDefault();
-        console.log(cpf)
-       const response = await Api.post('/login',{
-
+       const response = await Api.post('/signup',{
             cpf,
             email,
-            login,
-            nome:'teste',
+            login:email,
+            nome,
             senha,
         })
         console.log(response)
@@ -30,7 +28,7 @@ const Cadastro: React.FC = () => {
             <Header></Header>
             <Form onSubmit={handleCreateUser}>
                 <span className='title'>
-                    <h1>Informações de cadastro</h1>
+                    <h1>Cadastro</h1>
                 </span>
 
                 <Box>
@@ -58,23 +56,23 @@ const Cadastro: React.FC = () => {
 
                 <Box>
                     <div>
-                        <label htmlFor="cpf">Cpf</label>
+                        <label htmlFor="nome">Seu nome Completo</label>
                         <input
-                            name="cpf"
+                            name="nome"
                             placeholder="E-mail ou nome de usuário"
                             type="text"
-                            value={cpf}
-                            onChange={e => setCpf(e.target.value)}
+                            value={nome}
+                            onChange={e => setNome(e.target.value)}
                         />
                     </div>
                     <div>
-                        <label htmlFor="login">Nome de usuário</label>
+                        <label htmlFor="cpf">Cpf</label>
                         <input
-                            name="login"
+                            name="cpf"
                             placeholder="Senha do usuário"
                             type="text"
-                            value={login}
-                            onChange={e => setLogin(e.target.value)}
+                            value={cpf}
+                            onChange={e => setCpf(e.target.value)}
                         />
                     </div>
                 </Box>
