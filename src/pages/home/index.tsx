@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
-import { Banner, BannerContent, BannerDetail, BannerImg, BannerTitle, TicketSearchContainer, UpBanner } from './styles';
+import { Banner, BannerContent, BannerDetail, BannerImg, BannerTitle, BodyContainer, BodyTitle, TicketSearchContainer, UpBanner } from './styles';
 
 import homeImage from '../../assets/images/woman-home.png';
 
@@ -58,6 +58,11 @@ const Home: React.FC = () => {
                         </TicketSearchContainer>
                     </BannerContent>
                 </Banner>
+
+                <BodyContainer>
+                    <BodyTitle>Promoções de vôos para você voltar a viajar</BodyTitle>
+                </BodyContainer>
+
             <Footer />
         </>
     );

@@ -94,3 +94,15 @@ export const TicketSearchContainer = styled.div`
 
 
 `;
+
+export const BodyContainer = styled.body`
+    margin: 0 120px;
+    width: 100%;
+    height: 100%;
+`;
+
+export const BodyTitle = styled.h2`
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 30px;
+`;
