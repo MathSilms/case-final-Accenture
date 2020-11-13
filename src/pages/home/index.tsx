@@ -6,6 +6,8 @@ import { Banner, BannerContent, BannerDetail, BannerImg, BannerTitle, TicketSear
 import homeImage from '../../assets/images/woman-home.png';
 
 import planeIcon from '../../assets/images/plane.svg';
+import locationIcon from '../../assets/images/location-point.svg';
+import calendarIcon from '../../assets/images/calendar.svg';
 
 
 const Home: React.FC = () => {
@@ -32,21 +34,21 @@ const Home: React.FC = () => {
 
                             <div className="input-container">
                                 <div className="icon-container">
-                                    <img src={planeIcon} alt="Avião"/>
+                                    <img src={locationIcon} alt="Avião"/>
                                 </div>
                                 <input type="text" name="origem" placeholder="Origem" />
                             </div>
 
                             <div className="input-container">
                                 <div className="icon-container">
-                                    <img src={planeIcon} alt="Avião"/>
+                                    <img src={calendarIcon} alt="Avião"/>
                                 </div>
                                 <input type="text" name="origem" placeholder="Origem" />
                             </div>
 
                             <div className="input-container">
                                 <div className="icon-container">
-                                    <img src={planeIcon} alt="Avião"/>
+                                    <img src={calendarIcon} alt="Avião"/>
                                 </div>
                                 <input type="text" name="origem" placeholder="Origem" />
                             </div>

@@ -17,6 +17,10 @@ export const UpBanner = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    .banner-col {
+        max-width: 50%;
+    }
 `;
 
 export const BannerTitle = styled.h1`
@@ -35,7 +39,6 @@ export const BannerDetail = styled.h2`
 
 export const BannerImg = styled.img`
     width: auto;
-    //max-width: 50%;
     object-fit: contain;
     padding: 0 20px;
 `;
