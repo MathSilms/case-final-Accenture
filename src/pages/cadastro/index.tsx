@@ -2,25 +2,47 @@ import React, { useState, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/header';
 import { Api } from '../../services/api';
-import { Form, Box } from './styles';
+import { Form, Box, Modal, Exit } from './styles';
 
 const Cadastro: React.FC = () => {
+    const [success, setSuccess] = useState(false);
+    // const [error, setError] = useState(false);
+    const [inputError, setInputError] = useState<string>('');
 
     const [email, setEmail] = useState<string>('')
     const [senha, setSenha] = useState<string>('')
     const [cpf, setCpf] = useState<string>('')
     const [nome, setNome] = useState<string>('')
 
+
     async function handleCreateUser(e: FormEvent<HTMLFormElement>): Promise<void> {
         e.preventDefault();
-       const response = await Api.post('/signup',{
-            cpf,
-            email,
-            login:email,
-            nome,
-            senha,
-        })
-        console.log(response)
+
+        const data = { email, senha, nome, cpf }
+
+        // @ts-ignore
+        const keyWithError = Object.keys(data).find(key => !data[key])
+        if (keyWithError) {
+            return setInputError(keyWithError.toUpperCase())
+        }
+
+
+        try {
+            const response = await Api.post('/signup', {
+                cpf,
+                email,
+                login: email,
+                nome,
+                senha,
+            })
+
+            setSuccess(true)
+
+        } catch (err) {
+            setInputError('tivemos um pequeno erro, tente novamente mais tarde!')
+            return
+        }
+
     }
 
     return (
@@ -81,6 +103,21 @@ const Cadastro: React.FC = () => {
                 <button>Finalizar cadastro</button>
                 <span className='haveAccess'>Já tem uma conta? <Link to='/login'>Faça Login!</Link> </span>
             </Form>
+
+
+            { success &&
+                <Modal color={'green'}>
+                    <Exit size={25} onClick={() => setSuccess(false)} />
+                    <h1>Cadastro Efetuado com sucesso</h1>
+                </Modal>
+            }
+
+            { inputError &&
+                <Modal color={'red'}>
+                    <Exit size={25} onClick={() => setInputError('')} />
+                    <h1>Preencha corretamente o campo {inputError} com dados validos</h1>
+                </Modal>
+            }
         </>
     );
 
