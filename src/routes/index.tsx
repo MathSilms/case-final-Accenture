@@ -16,16 +16,16 @@ const Routes: React.FC = () => (
     <Switch>
         <Route path="/" exact component={Home} />
 
-        <Route path="/pesquisaPassagens" component={PesquisaPassagens} />
-        <Route path="/passagens/info" component={InfoPassagens} />
+        <Route path="/pesquisaPassagens" exact component={PesquisaPassagens} />
+        <Route path="/passagens/info" exact component={InfoPassagens} />
 
-        <Route path="/login" component={Login} />
-        <Route path="/cadastro" component={Cadastro} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/cadastro" exact component={Cadastro} />
 
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/dashboard/profile" component={Profile} />
-        <Route path="/dashboard/viagens" component={Viagens} />
-        <Route path="/dashboard/favoritos" component={Favoritos} />
+        <Route path="/dashboard" exact component={Dashboard} />
+        <Route path="/dashboard/profile" exact component={Profile} />
+        <Route path="/dashboard/viagens" exact component={Viagens} />
+        <Route path="/dashboard/favoritos" exact component={Favoritos} />
 
     </Switch>
 )
