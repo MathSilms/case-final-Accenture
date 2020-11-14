@@ -8,7 +8,6 @@ const Menu: React.FC = () => {
         <MenuPerson>
             <div>.</div>
             <div>.</div>
-
         </MenuPerson>
       </>
   )
