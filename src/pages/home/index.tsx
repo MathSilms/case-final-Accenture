@@ -24,7 +24,7 @@ const Home: React.FC = () => {
                             </div>
                             <BannerImg src={homeImage} alt="Mulher viajando"/>
                         </UpBanner>
-                        <TicketSearch redirectPath="/passagens"/>
+                        <TicketSearch redirectPath="/passagens" saveInLocalStorage />
                     </BannerContent>
                 </Banner>
 
