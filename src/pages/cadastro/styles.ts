@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { AiOutlineClose } from 'react-icons/ai'
+
+interface ModalProps {
+    color:string,
+}
 
 export const Form = styled.form`
     background-color:rgba(0, 0, 0, 0.1);
@@ -124,3 +129,47 @@ export const Box = styled.div`
     }
 `;
 
+export const Modal = styled.div<ModalProps>`
+
+
+
+    background-color:rgba(0,0,0,0.5);
+    position: absolute;
+    top:25%;
+    right:25%;
+    z-index:999;
+    width:50%;
+    height:60%;
+    background-color:white;
+    box-shadow:1px 1px 8px 2px black;
+    display:flex;
+    border-radius:5px;
+    border:1px solid blue;
+
+    h1{
+        text-align:center;
+        width:100%;
+        display:block;
+        font-size:25px;
+        display:block;
+        color:${props => props.color};
+        margin-top:125px;
+
+    }
+
+`;
+
+export const Exit = styled(AiOutlineClose)`
+    position: absolute;
+    display:block;
+    margin:5px;
+    color:black;
+    cursor: pointer;
+    right:5px;
+
+`;
+
+export const Error = styled.span`
+    font-size:12px;
+    color:red;
+`;
