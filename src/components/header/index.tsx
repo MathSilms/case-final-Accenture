@@ -8,7 +8,7 @@ const Header: React.FC = () => {
             <Containt1>Teste1</Containt1>
             <Containt2>
                 <Link to='/'>Home</Link>
-                <Link to='/PesquisaPassagens'>Passagens</Link>
+                <Link to='/passagens'>Passagens</Link>
                 <Link to='/dashboard/viagens'>Viagens</Link>
                 <Link to='/dashboard/profile'>Perfil</Link>
                 <Link to='/login'>
