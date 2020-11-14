@@ -13,5 +13,7 @@ export const Content  = styled.div`
     flex-direction:column;
     background-color:red;
 
+    nav{
 
+    }
 `;
