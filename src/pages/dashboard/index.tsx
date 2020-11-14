@@ -4,23 +4,28 @@ import Footer from '../../components/footer';
 import Header from '../../components/header';
 import Menu from '../../components/Menu';
 
-import { Content, Container } from './styles';
+import { Content, Container, Bar } from './styles';
 
 const dashboard: React.FC = () => {
     return (
         <>
             <Header />
             <Container>
-                <Menu />
-                <Content>
-                   <nav className="Bar">
-                       <Link to=''>Reservas Efetuadas</Link>
-                       <Link to=''>Passagens compradas</Link>
-                       <Link to=''>Passagens Favoritas</Link>
-                   </nav>
-                   <div className="conteudo">
+                <div className='transferFlex'>
+                    <div className='space'>
 
-                   </div>
+                    </div>
+                    <Bar >
+                        <Link to='#'>Reservas Efetuadas</Link>
+                        <Link to='#'>Passagens compradas</Link>
+                        <Link to='#'>Passagens Favoritas</Link>
+                    </Bar>
+                </div>
+                <Content>
+                    <Menu />
+                    <div className="conteudo">
+                        .
+                    </div>
                 </Content>
             </Container>
             <Footer />
