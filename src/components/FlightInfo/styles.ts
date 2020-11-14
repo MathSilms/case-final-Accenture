@@ -7,7 +7,12 @@ export const Container = styled.div`
     max-width: 300px;
     position: relative;
     margin: 0 10px 10px 10px;
+    cursor: pointer;
+    transition: opacity .2s;
 
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
 export const FlightImage = styled.img`
