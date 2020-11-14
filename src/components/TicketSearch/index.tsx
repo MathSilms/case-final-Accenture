@@ -1,12 +1,30 @@
 import React, { FormEvent, useCallback, useState } from 'react';
 
 import { Container } from './styles';
+import { Exit, Modal } from '../../pages/cadastro/styles';
+
 
 import planeIcon from '../../assets/images/plane.svg';
 import locationIcon from '../../assets/images/location-point.svg';
 import calendarIcon from '../../assets/images/calendar.svg';
 
-const TicketSearch: React.FC = () => {
+import data from '../../assets/data/airports.json';
+import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
+interface AirportCodes {
+    code: string;
+    name: string;
+    type: string;
+}
+
+interface TicketSearchProps {
+    redirectPath?: string;
+}
+
+const TicketSearch: React.FC<TicketSearchProps> = ({ redirectPath }) => {
+    const history = useHistory();
+
     const [origin, setOrigin] = useState('');
     const [destination, setDestination] = useState('');
     const [initialDate, setInitialDate] = useState('');
@@ -15,21 +33,48 @@ const TicketSearch: React.FC = () => {
     const [childrenQuantity, setChildrenQuantity] = useState(0);
     const [infantsQuantity, setInfantsQuantity] = useState(0);
     const [currencyCode, setCurrencyCode] = useState('');
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+        setOrigin('');
+        setDestination('');
+        setInitialDate('');
+        setFinalDate('');
+    }, [error]);
 
     const handleSearch = useCallback((event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
+        if (!origin || !destination || !initialDate || !finalDate ) {
+            setError(true);
+            return;
+        }
 
-        console.log({
-            origin,
-            destination,
-            initialDate,
-            finalDate,
-            adultsQuantity,
-            childrenQuantity,
-            infantsQuantity,
-            currencyCode
-        })
+        let originIndex = data.findIndex((airport: AirportCodes) => (
+            airport.code === origin.toUpperCase() ||
+            airport.name.toUpperCase().includes(origin.toUpperCase())
+        ));
+
+        let destinationIndex = data.findIndex((airport: AirportCodes) => (
+            airport.code === destination.toUpperCase() ||
+            airport.name.toUpperCase().includes(destination.toUpperCase())
+        ));
+
+        const searchData = {
+            adults: adultsQuantity,
+            children: childrenQuantity,
+            currencyCode,
+            departureDate: initialDate,
+            destinationCode: destinationIndex !== -1 ? data[destinationIndex].code : setError(true),
+            infants: infantsQuantity,
+            max: 10,
+            originCode: originIndex !== -1 ? data[originIndex].code : setError(true),
+            returnDate: finalDate,
+        };
+
+
+        redirectPath && history.push(redirectPath);
+
     }, [origin, destination, initialDate, finalDate, adultsQuantity, childrenQuantity, infantsQuantity, currencyCode]);
 
     return (
@@ -64,7 +109,7 @@ const TicketSearch: React.FC = () => {
                     <input
                         onChange={e => setInitialDate(e.target.value)}
                         value={initialDate}
-                        placeholder="Ida"
+                        placeholder="Ida (yyyy-mm-dd)"
                     />
                 </div>
 
@@ -75,7 +120,7 @@ const TicketSearch: React.FC = () => {
                     <input
                         onChange={e => setFinalDate(e.target.value)}
                         value={finalDate}
-                        placeholder="Volta"
+                        placeholder="Volta (yyyy-mm-dd)"
                     />
                 </div>
 
@@ -108,6 +153,13 @@ const TicketSearch: React.FC = () => {
                 </select>
 
             </div>
+
+            {error && (
+                <Modal color="red">
+                    <Exit size={25} onClick={() => setError(false)} />
+                    <h1>Digite todos os campos de busca</h1>
+                </Modal>
+            )}
         </Container>
     );
 };
