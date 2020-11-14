@@ -60,6 +60,27 @@ const Home: React.FC = () => {
                             price="R$150,00"
                             date="22/11/20"
                         />
+                        <FlightInfo
+                            country="BR"
+                            city="Rio de Janeiro"
+                            state="RJ"
+                            price="R$150,00"
+                            date="22/11/20"
+                        />
+                        <FlightInfo
+                            country="BR"
+                            city="Rio de Janeiro"
+                            state="RJ"
+                            price="R$150,00"
+                            date="22/11/20"
+                        />
+                        <FlightInfo
+                            country="BR"
+                            city="Rio de Janeiro"
+                            state="RJ"
+                            price="R$150,00"
+                            date="22/11/20"
+                        />
                     </div>
                 </BodyContent>
 

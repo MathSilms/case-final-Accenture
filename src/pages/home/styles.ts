@@ -50,8 +50,10 @@ export const BodyContent = styled.div`
 
     .flight-row {
         display: flex;
-        justify-content: space-around;
+        justify-content: left;
         width: 100%;
+        height: auto;
+        flex-wrap: wrap;
     }
 `;
 
