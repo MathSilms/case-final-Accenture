@@ -1,8 +1,9 @@
 import React from 'react';
+import FlightInfo from '../../components/FlightInfo';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import TicketSearch from '../../components/TicketSearch';
-import { TicketBanner, TicketBannerContent, TicketTitle } from './styles';
+import { BodyContent, TicketBanner, TicketBannerContent, TicketTitle, BodyTitle } from './styles';
 
 
 const PesquisaPassagens: React.FC = () => {
@@ -16,6 +17,20 @@ const PesquisaPassagens: React.FC = () => {
                         <TicketSearch />
                     </TicketBannerContent>
                 </TicketBanner>
+
+                <BodyContent>
+                    <BodyTitle>Resultados: </BodyTitle>
+
+                    <div className="flight-row">
+                        <FlightInfo
+                            country="BR"
+                            city="São Paulo"
+                            state="SP"
+                            price="R$250,00"
+                            date="25/11/20"
+                        />
+                    </div>
+                </BodyContent>
             <Footer>Teste</Footer>
         </>
     );

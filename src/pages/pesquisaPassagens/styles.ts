@@ -19,3 +19,25 @@ export const TicketTitle = styled.div`
     font-size: 30px;
     margin: 50px 0 20px 0;
 `;
+
+export const BodyContent = styled.div`
+    margin: 0 120px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .flight-row {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+`;
+
+export const BodyTitle = styled.h2`
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 30px;
+    width: 100%;
+`;
+
