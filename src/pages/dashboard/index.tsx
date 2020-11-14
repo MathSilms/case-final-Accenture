@@ -1,10 +1,16 @@
 import React from 'react';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
+
+import  './styles'
 
 const Dashboard:React.FC = () =>{
 
 return (
     <>
-        <h1>Dashboard</h1>
+        <Header></Header>
+
+        <Footer></Footer>
     </>
 )
 
