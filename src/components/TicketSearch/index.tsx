@@ -32,7 +32,7 @@ const TicketSearch: React.FC<TicketSearchProps> = ({ redirectPath }) => {
     const [adultsQuantity, setAdultsQuantity] = useState(1);
     const [childrenQuantity, setChildrenQuantity] = useState(0);
     const [infantsQuantity, setInfantsQuantity] = useState(0);
-    const [currencyCode, setCurrencyCode] = useState('');
+    const [currencyCode, setCurrencyCode] = useState('BRL');
     const [error, setError] = useState(false);
 
     useEffect(() => {
@@ -68,7 +68,7 @@ const TicketSearch: React.FC<TicketSearchProps> = ({ redirectPath }) => {
             departureDate: initialDate,
             destinationCode: destinationIndex !== -1 ? data[destinationIndex].code : setError(true),
             infants: infantsQuantity,
-            max: 10,
+            max: 5,
             originCode: originIndex !== -1 ? data[originIndex].code : setError(true),
             returnDate: finalDate,
         };

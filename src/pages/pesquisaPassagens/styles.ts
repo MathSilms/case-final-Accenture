@@ -25,6 +25,17 @@ export const BodyContent = styled.div`
     display: flex;
     flex-wrap: wrap;
 
+    .search-params {
+        margin-top: 10px;
+        display: flex;
+
+        > span {
+            width: 100%;
+            flex-wrap: nowrap;
+            margin-right: 10px;
+        }
+    }
+
     .flight-row {
         display: flex;
         justify-content: left;
