@@ -67,8 +67,6 @@ const PesquisaPassagens: React.FC = () => {
         sendSearchData();
     }, [searchData]);
 
-
-
     return (
         <>
             <Header>teste</Header>
@@ -100,7 +98,7 @@ const PesquisaPassagens: React.FC = () => {
                             city={result.itineraries[0].segments[0].departure.iataCode}
                             state={result.itineraries[0].segments[0].arrival.iataCode}
                             price={`${result.price.currency} ${result.price.total}`}
-                            date={result.itineraries[0].segments[0].departure.at}
+                            date={result.itineraries[0].segments[0].arrival.at}
                         />
                     )) : (<h1>Nenhuma passagem encontrada</h1>)}
                 </div>

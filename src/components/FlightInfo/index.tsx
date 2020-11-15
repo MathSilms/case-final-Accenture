@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { Container, FlightImage, LowerRow, UpperRow } from './styles';
 
@@ -14,6 +14,13 @@ interface FlightInfoProps {
 }
 
 const FlightInfo: React.FC<FlightInfoProps> = ({ city, state, country, price, date }: FlightInfoProps) => {
+    const formattedData = useMemo(() => {
+        return (new Date(date).getDate()+'/'+
+            (new Date(date).getMonth()+1)+'/'+
+            new Date(date).getFullYear()
+        )
+    }, []);
+
   return (
     <Container>
         <FlightImage src={flightImage}/>
@@ -32,7 +39,7 @@ const FlightInfo: React.FC<FlightInfoProps> = ({ city, state, country, price, da
                         <span className="flight-price"> {price}</span>
                     </span>
                 </div>
-                <span className="date">{date}</span>
+                <span className="date">{formattedData}</span>
             </div>
         </LowerRow>
     </Container>
