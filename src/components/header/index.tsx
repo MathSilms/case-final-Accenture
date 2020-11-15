@@ -11,8 +11,8 @@ const Header: React.FC = () => {
             <Containt2>
                 <Link to='/'>Home</Link>
                 <Link to='/passagens'>Passagens</Link>
-                <Link to='/dashboard/viagens'>Viagens</Link>
-                <Link to='/dashboard/profile'>FAQ</Link>
+                <Link to='#'>Viagens</Link>
+                <Link to='#'>FAQ</Link>
                 <Link to='/login' className='not'>
                     <button>Entrar</button>
                 </Link>
