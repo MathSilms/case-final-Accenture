@@ -2,7 +2,7 @@ import React, { FormEvent, useState } from 'react';
 
 import { LocationIcon, MailIcon, MenuPerson } from './styles';
 
-import img from '../../assets/images/profiler.jpeg';
+import img from '../../assets/images/profile.jpg';
 
 const Menu: React.FC = () => {
 

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Viagens:React.FC = () =>{
+// import { Container } from './styles';
 
-return <h1>Viagens</h1>;
+const viagens: React.FC = () => {
+  return <div />;
+}
 
-};
-
-export default Viagens;
+export default viagens;

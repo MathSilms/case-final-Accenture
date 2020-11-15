@@ -4,7 +4,7 @@ import { FiMail } from 'react-icons/fi';
 
 
 export const MenuPerson = styled.main`
-        flex:0.8;
+        flex:1;
         //background-color:blue;
         width: 100%;
         max-height:1000px;
