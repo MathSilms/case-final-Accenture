@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FlightInfo from '../../components/FlightInfo';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
@@ -6,7 +6,18 @@ import TicketSearch from '../../components/TicketSearch';
 import { BodyContent, TicketBanner, TicketBannerContent, TicketTitle, BodyTitle } from './styles';
 
 
+interface SearchDataProps {
+    adults: number;
+    children: number;
+    infants: number;
+    max: number;
+
+}
+
 const PesquisaPassagens: React.FC = () => {
+    const [searchData, setSearchData] = useState();
+
+    useState
 
     return (
         <>

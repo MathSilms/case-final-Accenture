@@ -20,10 +20,9 @@ interface AirportCodes {
 
 interface TicketSearchProps {
     redirectPath?: string;
-    saveInLocalStorage?: boolean;
 }
 
-const TicketSearch: React.FC<TicketSearchProps> = ({ redirectPath, saveInLocalStorage }) => {
+const TicketSearch: React.FC<TicketSearchProps> = ({ redirectPath }) => {
     const history = useHistory();
 
     const [origin, setOrigin] = useState('');
@@ -74,10 +73,7 @@ const TicketSearch: React.FC<TicketSearchProps> = ({ redirectPath, saveInLocalSt
             returnDate: finalDate,
         };
 
-        if (saveInLocalStorage) {
-            localStorage.setItem('centaurus@search', JSON.stringify(searchData));
-        }
-
+        localStorage.setItem('centaurus@search', JSON.stringify(searchData));
 
         redirectPath && history.push(redirectPath);
 
