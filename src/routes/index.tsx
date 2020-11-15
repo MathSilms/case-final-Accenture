@@ -10,7 +10,7 @@ import Profile from '../pages/profile';
 import PesquisaPassagens from '../pages/pesquisaPassagens';
 import InfoPassagens from '../pages/infoPassagem';
 import Viagens from '../pages/viagens';
-import Favoritos from '../pages/favoritos';
+//import Favoritos from '../pages/favoritos';
 
 const Routes: React.FC = () => (
     <Switch>
@@ -25,7 +25,7 @@ const Routes: React.FC = () => (
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/dashboard/profile" exact component={Profile} />
         <Route path="/dashboard/viagens" exact component={Viagens} />
-        <Route path="/dashboard/favoritos" exact component={Favoritos} />
+        <Route path="/dashboard/favoritos" exact component={Dashboard} />
 
     </Switch>
 )
