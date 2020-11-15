@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+<h1 align="center"> Centaurus-FrontEnd </h1>
+<p><strong>O principal intuito do projeto foi montar a interface de uma aplicação para compras de passagens aéreas durante o treinamento da Gama Academy para os novos funcionários da Accenture. </strong> </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desenvolvido pela equipe 2 - @T.I Boys :necktie:
 
-## Available Scripts
+****
+ **Integrantes** :star:
+* Bruno Pereira   :gear:
+* Gean Lucas :gear:
+* Matheus Rian  :gear:
+* Matheus de Oliveira  :gear:
+******
 
-In the project directory, you can run:
+### 📦 Instalação
 
-### `yarn start`
+```bash
+yarn
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 🎨 Layout
 
-### `yarn test`
+O layout da aplicação está disponível no Figma:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Figma](https://www.figma.com/file/25J7S0aWgfUHggU78TCH0D/Accenture-Pleno?node-id=0%3A1)
 
-### `yarn build`
+### 🛠 Tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled-components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Funcionalidades
 
-### `yarn eject`
+● Cadastro do usuário, login e logout;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+● Criação de uma página de perfil para o usuário onde
+apareçam suas principais informações, reservas
+realizadas e passagens compradas;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+● Página de busca de passagens aéreas, integrada com o
+máximo de companhias/sites de busca possível, com
+filtros de data, origem e destino, e classificação por
+relevância e preço;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+● Checkout integrado com meio de pagamento;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+● Função de favoritar uma passagem e página de exibição
+de favoritos.
 
-## Learn More
+******
+##  ✨ Requisitos não-funcionais
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+● Performance
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+● Alta Disponibilidade
+
+● Testes Automatizados
+
+● Segurança (proteger chamadas diretas a API sem ser via
+front-end)
+
+● Logs/Rastreabilidade
+
+● Tratamento de Exceção
+
+● Responsividade (renderizar bem no desktop/note, tablet e
+celular)
+
+● Controle de concorrência na persistência dos objetos
+******
+
+
+## 🔗 Links da equipe
+
+- [API](http://javatravelers-backend.azurewebsites.net/)
+- [Trello](https://trello.com/b/2CPFLNYL/template-kanban)
+- [figma](https://trello.com/b/2CPFLNYL/template-kanban)
+- [whimsical](https://whimsical.com/7aqa4rQSdRUYJWXpUE3XXf)
+
+
+<h2 align="center" > Entregas adicionais - T.I Boys </h2>
+
+A equipe utilizou a ferramenta [Trello](https://trello.com/) e [Discord](discord.com) para auxiliar no Scrum. Após analisar o desafio, foi listado as atividades para definir o nosso Product Backlog. Para a realização das atividades, dividimos em dois Sprints(ciclos) com prazos equivalente a uma semana com as tarefas que cada membro da equipe deveria realizar. As atividades para cada Sprint foram definidas através de um Sprint Planning. Dailys foram realizadas para alinhar algumas questão do projeto.
+* A equipe foi definida através de soft e hard skills.
+* A maior dificuldade foi o tempo dado para a realização do desafio. Além disso, a inexperiência com algumas tecnologias e integração com a API também foram dificuldades a ser superadas.
+* O projeto nos mostrou a importância de trabalhar em equipe. Compartilhamos o nosso conhecimento e experiência afim de concluir o projeto da melhor maneira possível.
