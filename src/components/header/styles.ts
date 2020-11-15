@@ -8,12 +8,18 @@ export const Bar = styled.header`
     justify-content:space-between;
     align-items:center;
     padding: 0 30px 0 30px;
+    overflow: hidden;
 `;
 
 export const Containt1 = styled.div`
     flex:1;
-    background-color:red;
-
+    height:100%;
+    img{
+        margin-top:15px;
+        width:150px;
+        height:160%;
+        object-fit:cover;
+    }
 
 `;
 
@@ -38,6 +44,9 @@ export const Containt2 = styled.div`
     a:hover{
         border: 1px solid white;
         border-radius:5px
+    }
+    .not:hover{
+        border:none;
     }
 
     button{

@@ -2,16 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bar, Containt1, Containt2 } from './styles'
 
+import logo from '../../assets/images/Logo2.png'
+
 const Header: React.FC = () => {
     return (
         <Bar>
-            <Containt1>Teste1</Containt1>
+            <Containt1><img src={logo} alt=""/></Containt1>
             <Containt2>
                 <Link to='/'>Home</Link>
                 <Link to='/passagens'>Passagens</Link>
                 <Link to='/dashboard/viagens'>Viagens</Link>
-                <Link to='/dashboard/profile'>Perfil</Link>
-                <Link to='/login'>
+                <Link to='/dashboard/profile'>FAQ</Link>
+                <Link to='/login' className='not'>
                     <button>Entrar</button>
                 </Link>
             </Containt2>
