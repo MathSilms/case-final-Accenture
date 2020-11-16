@@ -7,12 +7,12 @@ import { Form, Box, Modal, Exit } from './styles';
 const Cadastro: React.FC = () => {
     const [success, setSuccess] = useState(false);
     // const [error, setError] = useState(false);
-    const [inputError, setInputError] = useState<string>('');
+    const [inputError, setInputError] = useState('');
 
-    const [email, setEmail] = useState<string>('')
-    const [senha, setSenha] = useState<string>('')
-    const [cpf, setCpf] = useState<string>('')
-    const [nome, setNome] = useState<string>('')
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const [cpf, setCpf] = useState('')
+    const [nome, setNome] = useState('')
 
 
     async function handleCreateUser(e: FormEvent<HTMLFormElement>): Promise<void> {

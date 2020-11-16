@@ -72,7 +72,7 @@ const PesquisaPassagens: React.FC = () => {
             <Header>teste</Header>
             <TicketBanner>
                 <TicketBannerContent>
-                    <TicketTitle>Pesquisar passagens por todo o Brasil!</TicketTitle>
+                    <TicketTitle>Pesquisar passagens por todo o Mundo!</TicketTitle>
                     <TicketSearch redirectPath="/passagens" />
                 </TicketBannerContent>
             </TicketBanner>

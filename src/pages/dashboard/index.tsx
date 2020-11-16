@@ -18,7 +18,7 @@ const dashboard: React.FC = () => {
                     </div>
                     <Bar >
                         <Link to='#'>Reservas Efetuadas</Link>
-                        <Link to='#'>Passagens compradas</Link>
+                        <Link to='/dashboard/viagens'>Passagens compradas</Link>
                         <Link to='/dashboard/favoritos' className='active'>Passagens Favoritas</Link>
                     </Bar>
                 </div>
